@@ -2,17 +2,18 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.9.12'
-        jdk 'JDK-11'
+        maven 'Maven'
+        jdk 'JDK-21'
     }
 
     triggers {
         // Poll SCM every 2 minutes for changes (for local Jenkins)
-        pollSCM('H/2 * * * *')
+        pollSCM('H/1 * * * *')
 
         // Alternative: Use SCM webhook trigger (requires ngrok for local Jenkins)
         // githubPush()
     }
+
 
     options {
         // Keep only last 10 builds

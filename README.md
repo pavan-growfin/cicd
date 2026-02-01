@@ -14,6 +14,8 @@ This project contains:
 
 **GitHub**: https://github.com/pavan-growfin/cicd
 
+**Status**: CI/CD pipeline configured with Jenkins
+
 ## Quick Start
 
 ### Build the Project

@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+        JAVA_HOME = "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
+    }
+
     triggers {
         // Poll SCM every 2 minutes for changes (for local Jenkins)
         pollSCM('H/1 * * * *')

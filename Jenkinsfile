@@ -7,11 +7,11 @@ pipeline {
     }
 
     triggers {
-        // Use SCM webhook trigger (recommended for better performance)
-        githubPush()
+        // Poll SCM every 2 minutes for changes (for local Jenkins)
+        pollSCM('H/2 * * * *')
 
-        // Alternative: Poll SCM every 5 minutes for changes
-        // pollSCM('H/5 * * * *')
+        // Alternative: Use SCM webhook trigger (requires ngrok for local Jenkins)
+        // githubPush()
     }
 
     options {

@@ -1,16 +1,12 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven'
-        jdk 'JDK-21'
-    }
-
     triggers {
         // Poll SCM every 2 minutes for changes (for local Jenkins)
         pollSCM('H/1 * * * *')
 
-        // Alternative: Use SCM webhook trigger (requires ngrok for local Jenkins)
+        // Alternative: Use SCM webhook
+         trigger (requires ngrok for local Jenkins)
         // githubPush()
     }
 

@@ -4,6 +4,7 @@ A simple Java project demonstrating Maven build and Jenkins CI/CD pipeline integ
 
 ## Project Overview
 
+
 This project contains:
 - Simple Calculator application
 - JUnit 5 test suite

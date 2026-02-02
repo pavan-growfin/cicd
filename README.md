@@ -34,6 +34,40 @@ mvn clean compile
 java -cp target/classes com.example.Calculator
 ```
 
+## Docker
+
+Docker images are automatically built and pushed to GitHub Container Registry on every push to main.
+
+### Pull and Run Docker Image
+
+```bash
+# Pull the latest image
+docker pull ghcr.io/pavan-growfin/simple-java-test:latest
+
+# Run the application
+docker run ghcr.io/pavan-growfin/simple-java-test:latest
+```
+
+### Run Specific Version
+
+```bash
+# Pull a specific commit version
+docker pull ghcr.io/pavan-growfin/simple-java-test:main-abc123
+
+# Run it
+docker run ghcr.io/pavan-growfin/simple-java-test:main-abc123
+```
+
+### Build Docker Image Locally
+
+```bash
+# Build the image
+docker build -t simple-java-test:local .
+
+# Run locally built image
+docker run simple-java-test:local
+```
+
 ## Jenkins CI/CD
 
 The project includes automated Jenkins pipeline that:
